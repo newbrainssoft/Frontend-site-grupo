@@ -1,52 +1,24 @@
 import React, { Component } from "react";
 
 import "./Home.css";
+import Carousel from "../Carousel";
 
-function MainImage() {
-  return (
-    <section>
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-ride="carousel"
-      >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+// image, thumbnail, title, content, rating, alt
+let data = [
+  {
+    image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    title: 'primeiro slide'
+  },
+  {
+    image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    title: 'segundo slide'
+  },
+  {
+    image: 'https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    title: 'terceiro slide'
+  },
+]
 
-        <div class="carousel-inner" style={{ maxHeight: "720px" }}>
-          <div class="carousel-item active">
-            <img
-              class="d-block w-100"
-              src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt="First slide"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt="Second slide"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt="Third slide"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function RecentPostItem() {
   return (
@@ -121,7 +93,10 @@ export default class Home extends Component {
     return (
       <main>
         {/* slide de imagens  */}
-        <MainImage />
+        <Carousel 
+          data={data}
+          id="mainimage"
+        />
 
         <div className="container-fluid d-flex flex-column align-items-center">
           {/* Conteudo principal  */}

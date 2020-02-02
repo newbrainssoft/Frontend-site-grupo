@@ -1,3 +1,8 @@
+.carousel-inner {
+  max-height: 720px;
+  opacity: 0.95;
+}
+
 .divider {
   background-color: #eee;
   height: 1px;

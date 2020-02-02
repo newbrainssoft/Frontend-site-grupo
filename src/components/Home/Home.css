@@ -1,0 +1,12 @@
+.divider {
+  background-color: #eee;
+  height: 1px;
+  width: 100%;
+}
+
+/* md */
+@media (min-width: 768px) {
+  #lastest-post {
+    columns: 2;
+  }
+}

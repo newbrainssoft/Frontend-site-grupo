@@ -1,0 +1,17 @@
+.navbar {
+  height: auto;
+  background-color: #050505f5;
+}
+
+.navbar-brand {
+  font-size: 1.6em;
+  color: rgb(231, 231, 231) !important;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 80px;
+  }
+
+}

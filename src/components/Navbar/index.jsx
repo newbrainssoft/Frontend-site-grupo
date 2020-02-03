@@ -9,7 +9,7 @@ function NavButton(props) {
       <a className="nav-link navbutton px-0 pl-2" href={props.href}>
         {props.icon && <i className={props.icon}></i>}
         <small className="ml-1 d-md-inline d-sm-none">{props.name}</small>
-        {props.active && <span class="sr-only">(current)</span>}
+        {props.active && <span className="sr-only">(current)</span>}
       </a>
     </li>
   );
@@ -18,16 +18,16 @@ function NavButton(props) {
 export default function Navbar() {
   return (
     <header>
-      <nav class="navbar navbar-expand-sm navbar-dark bg-black fixed-top">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-black fixed-top">
         <div className="container">
-          <a class="navbar-brand d-flex align-items-center" href="/">
+          <a className="navbar-brand d-flex align-items-center" href="/">
             <em>
               coding<span className="text-info-light">.py</span>
             </em>
           </a>
 
           <button
-            class="navbar-toggler d-lg-none border-0 ml-auto"
+            className="navbar-toggler d-lg-none border-0 ml-auto"
             type="button"
             data-toggle="collapse"
             data-target="#collapsibleNavId"
@@ -35,12 +35,12 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav ml-auto">
+          <div className="collapse navbar-collapse" id="collapsibleNavId">
+            <ul className="navbar-nav ml-auto">
               <NavButton name="Home" href="/" icon="fal fa-home" active />
-              <NavButton name="User" icon="fal fa-user" />
+              <NavButton name="User" icon="fal fa-user" /> 
               <NavButton name="Search" icon="fal fa-search" />
             </ul>
           </div>

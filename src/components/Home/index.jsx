@@ -6,16 +6,16 @@ import Carousel from "../Carousel";
 // image, thumbnail, title, content, rating, alt
 let data = [
   {
-    image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    title: 'primeiro slide'
+    image: 'https://img.ibxk.com.br/2020/01/31/31155819465353.jpg?w=1120&h=420&mode=crop&scale=both',
+    title: 'Inferior ao Poco F1? Poco X2 tem especificações vazadas'
   },
   {
-    image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    title: 'segundo slide'
+    image: 'https://img.ibxk.com.br/2020/01/31/31000614830626.jpg?w=1120&h=420&mode=crop&scale=both',
+    title: 'Física quântica pode explicar dificuldade de humanos em tomar decisões'
   },
   {
-    image: 'https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    title: 'terceiro slide'
+    image: 'https://img.ibxk.com.br/2020/01/31/31201901345453.jpg?w=1120&h=420&mode=crop&scale=both',
+    title: 'Star Wars: Underworld — série cancelada de George Lucas vaza na web'
   },
 ]
 

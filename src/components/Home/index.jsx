@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
 import "./Home.css";
 import Carousel from "../Carousel";
-import RecentPosts from "../RecentPosts"
+import RecentPosts from "../RecentPosts";
 
 // image, thumbnail, title, content, rating, alt
 let data = [
@@ -93,9 +93,80 @@ let data = [
   }
 ];
 
+function SidePostItem(props) {
+  return (
+    <div className="row py-4" style={{ borderBottom: "solid #ddd 0.001em" }}>
+      <div className="col-8 pl-0">
+        <a className="text-info text-justify card-text" href={props.href}>
+          {props.title}
+        </a>
+      </div>
+
+      <figure
+        className="col-4"
+        style={{
+          margin: 0,
+          padding: 0,
+          height: "95px"
+        }}
+      >
+        <img
+          style={{
+            height: "100%",
+            width: "100%",
+            objectFit: "cover"
+          }}
+          src={props.src}
+          alt=""
+        />
+      </figure>
+    </div>
+  );
+}
+
+function SidePosts() {
+  return (
+    <aside className="col-lg-4">
+      <article className="card mt-4">
+        <div className="card-header bg-white">
+          <h3 className="card-title font-weight-bold h6 my-0">
+            Cursos <i class="fal fa-podcast"></i>
+          </h3>
+        </div>
+        <div className="card-body py-0">
+          <div className="container">
+            <SidePostItem
+              title="Curso de Análise Técnica - Operece com eficiência e disciplina"
+              href="https://downloadcursos.net/curso-de-analise-tecnica-opere-com-eficiencia-e-disciplina/"
+              src="https://blog.genialinvestimentos.com.br/wp-content/uploads/2019/05/o-que-%C3%A9-e-o-que-faz-um-trader-1.jpg"
+            />
+
+            <SidePostItem
+              title="Machine Learning A-Z com Python e R"
+              href="https://downloadcursos.net/machine-learning-a-z-hands-on-python-r-in-data-science/"
+              src="https://mundohacker.net.br/wp-content/uploads/2019/06/1_p6ahiOqtwW6mxgk-WCDvlg.jpeg"
+            />
+
+            <SidePostItem
+              title="Curso de Design Gráfico para Midias Sociais"
+              href="https://downloadcursos.net/curso-design-grafico-para-social-media/"
+              src="https://estechead.com.br/wp-content/uploads/2016/08/graphic-design-tools-Feature_1290x688_MS.jpg"
+            />
+          </div>
+        </div>
+        <div className="card-footer bg-white">
+          <a className="card-link text-primary my-0" style={{fontSize: '0.8em'}} href="">
+            Ver todos <i class="far fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+    </aside>
+  );
+}
+
 export default function Home(props) {
   return (
-    <main>
+    <main className="bg-light">
       {/* slide de imagens  */}
       <Carousel data={data.slice(0, 3)} id="main" />
 
@@ -103,7 +174,7 @@ export default function Home(props) {
         <div className="row">
           <RecentPosts data={data.slice(3)} />
 
-          <aside className="col-lg-3">sdasdad</aside>
+          <SidePosts />
         </div>
 
         <div className="row" style={{ height: "500px" }}></div>

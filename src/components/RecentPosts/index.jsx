@@ -9,7 +9,7 @@ function RecentPostItem(props) {
     >
       <figure className="figure col-5" style={{ margin: 0, padding: 0 }}>
         {/* 540x300  */}
-        <img className="img-fluid" src={props.src} />
+        <img className="img-fluid" src={props.src} alt=""/>
       </figure>
 
       <div className="col-7">
@@ -38,5 +38,5 @@ export default function RecentPosts(props) {
     />
   ));
 
-  return <section className="col-lg-9">{RecentPostList}</section>;
+  return <section className="col-lg-8">{RecentPostList}</section>;
 }

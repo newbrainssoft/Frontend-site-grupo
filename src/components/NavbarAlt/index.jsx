@@ -6,7 +6,7 @@ function NavButton(props) {
     <li className={props.active ? "nav-item active" : "nav-item"}>
       <a className="nav-link navbutton px-0 pl-2" href={props.href}>
         {props.icon && <i className={props.icon}></i>}
-        <small className="ml-1 d-md-inline d-sm-none">{props.name}</small>
+        <small className="ml-1">{props.name}</small>
         {props.active && <span className="sr-only">(current)</span>}
       </a>
     </li>
@@ -16,7 +16,7 @@ function NavButton(props) {
 export default function NavbarAlt() {
   return (
     <header>
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm navbar-dark fixed-top">
         <div className="container">
           {/* botão de menu  */}
           <button
@@ -32,7 +32,7 @@ export default function NavbarAlt() {
           </button>
 
 					{/* icone do site  */}
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <i class="fab fa-python mr-1"></i>
             <span className="d-sm-none d-md-inline">
               <strong className="font-weight-bold">coding</strong>.py
@@ -42,9 +42,9 @@ export default function NavbarAlt() {
           {/* menu principal */}
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav mx-auto">
-              <NavButton name="Home" icon="fal fa-home" active />
-              <NavButton name="Blog" icon="fal fa-comments" />
-              <NavButton name="User" icon="fal fa-user" />
+              <NavButton name="Home" icon="fal fa-home" href="/" active />
+              <NavButton name="Blog" icon="fal fa-comments" href="/" />
+              <NavButton name="User" icon="fal fa-user" href="/"/>
             </ul>
           </div>
 

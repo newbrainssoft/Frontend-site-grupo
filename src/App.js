@@ -7,8 +7,8 @@ function App() {
   return (
     <React.Fragment>
       {/* Header */}
-      <Navbar />
-      {/* <NavbarAlt /> */}
+      {/* <Navbar /> */}
+      <NavbarAlt />
 
       {/* Main  */}
       <Home />

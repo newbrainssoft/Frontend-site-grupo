@@ -3,7 +3,7 @@ import React from "react";
 import "./Carousel.css";
 
 function CarouselItem(props) {
-  // props: src, title, alt
+  // props: src, title, href, alt
   return (
     <div
       className={props.index === 0 ? "carousel-item active" : "carousel-item"}
@@ -15,7 +15,9 @@ function CarouselItem(props) {
       />
 
       <div className="carousel-caption d-none d-md-block">
-        <h2 className="h2">{props.title}</h2>
+        <a className="h2 text-white" href={props.href}>
+          <h2>{props.title}</h2>
+        </a>
       </div>
     </div>
   );
@@ -35,7 +37,14 @@ function CarouselIndicatorItem(props) {
 export default function Carousel(props) {
   // carrega as imagens no carousel
   let CarouselList = props.data.map((elem, index) => (
-    <CarouselItem key={index} src={elem.image} title={elem.title} alt={elem.alt} index={index} />
+    <CarouselItem
+      key={index}
+      src={elem.image}
+      title={elem.title}
+      href={elem.link}
+      alt={elem.alt}
+      index={index}
+    />
   ));
 
   // carrega o indicador do slide

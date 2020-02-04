@@ -21,9 +21,13 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-sm navbar-dark bg-black fixed-top">
         <div className="container">
           <a className="navbar-brand d-flex align-items-center" href="/">
-            <em>
+            <i class="fab fa-python mr-1"></i>
+            {/* <em>
               coding<span className="text-info-light">.py</span>
-            </em>
+            </em> */}
+            <span>
+              <strong>coding</strong>.py
+            </span>
           </a>
 
           <button
@@ -40,7 +44,7 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav ml-auto">
               <NavButton name="Home" href="/" icon="fal fa-home" active />
-              <NavButton name="User" icon="fal fa-user" /> 
+              <NavButton name="User" icon="fal fa-user" />
               <NavButton name="Search" icon="fal fa-search" />
             </ul>
           </div>
